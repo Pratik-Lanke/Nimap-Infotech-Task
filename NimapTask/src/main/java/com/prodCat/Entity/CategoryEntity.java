@@ -48,14 +48,9 @@ public class CategoryEntity {
 	public String toString() {
 		return "CategoryEntity [categoryId=" + categoryId + ", categoryName=" + categoryName + "]";
 	}
-	/*public CategoryEntity(String categoryName) {
-		super();
-		this.categoryName = categoryName;
-	}*/
 	
 	public CategoryEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public CategoryEntity(String categoryName, List<ProductEntity> products) {

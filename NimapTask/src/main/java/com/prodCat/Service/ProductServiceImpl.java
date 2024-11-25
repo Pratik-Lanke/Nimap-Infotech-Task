@@ -18,25 +18,21 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductEntity saveProduct(ProductEntity product) {
-		// TODO Auto-generated method stub
 		return productRepo.save(product);
 	}
 
 	@Override
 	public List<ProductEntity> getAllProduct() {
-		// TODO Auto-generated method stub
 		return (List<ProductEntity>) productRepo.findAll();
 	}
 
 	@Override
 	public void delectProductById(Integer productId) {
-		// TODO Auto-generated method stub
 		productRepo.deleteById(productId);
 	}
 
 	@Override
-	public ProductEntity updateProduct(ProductEntity product, Integer productId) {
-		// TODO Auto-generated method stub
+	public ProductEntity updateProduct(ProductEntity product, Integer productId) { 
 		ProductEntity prod = productRepo.findById(productId).get();
 
 		if (Objects.nonNull(product.getProductName()) && !"".equalsIgnoreCase(product.getProductName())) {
@@ -52,7 +48,6 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Optional<ProductEntity> findById(Integer productId) {
-		// TODO Auto-generated method stub
 		return productRepo.findById(productId);
 	}
 

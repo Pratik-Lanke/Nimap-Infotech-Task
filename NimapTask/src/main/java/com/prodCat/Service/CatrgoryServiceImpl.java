@@ -16,19 +16,16 @@ public class CatrgoryServiceImpl implements CategoryService{
 	private CatrgoryRepo catrgoryRepo;
 	@Override
 	public CategoryEntity saveCategory(CategoryEntity category) {
-		// TODO Auto-generated method stub
 		return catrgoryRepo.save(category);
 	}
 
 	@Override
 	public List<CategoryEntity> getAllCategory() {
-		// TODO Auto-generated method stub
 		return (List<CategoryEntity>) catrgoryRepo.findAll();
 	}
 
 	@Override
 	public CategoryEntity updateCategory(CategoryEntity category, Integer categoryId) {
-		// TODO Auto-generated method stub
 		CategoryEntity cat = catrgoryRepo.findById(categoryId).get();
 
 		if (Objects.nonNull(category.getCategoryName()) && !"".equalsIgnoreCase(category.getCategoryName())) {
@@ -40,14 +37,12 @@ public class CatrgoryServiceImpl implements CategoryService{
 
 	@Override
 	public void delectCategoryById(Integer categoryId) {
-		// TODO Auto-generated method stub
 		catrgoryRepo.deleteById(categoryId);
 		
 	}
 
 	@Override
 	public Optional<CategoryEntity> findById(Integer categoryId) {
-		// TODO Auto-generated method stub
 		return catrgoryRepo.findById(categoryId);
 	}
 

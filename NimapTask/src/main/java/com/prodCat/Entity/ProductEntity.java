@@ -43,7 +43,6 @@ public class ProductEntity {
 	}
 	public ProductEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	
